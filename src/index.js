@@ -7,5 +7,6 @@ const App = function() {
 }
 
 // Take this component's generated HTML and put it on the page(DOM)
-ReactDOM.render(App);
+ReactDOM.render(<App />);
+//make an instance of component then pass it to the ReactDOM.render
 //Uncaught Error: Target container is not a DOM element.
