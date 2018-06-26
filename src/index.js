@@ -1,5 +1,5 @@
-//get react and give me access
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 // Create a new component. This component should produce some HTML
 const App = function() {
@@ -7,5 +7,5 @@ const App = function() {
 }
 
 // Take this component's generated HTML and put it on the page(DOM)
-React.render(App);
-//Uncaught TypeError: _react2.default.render is not a function
+ReactDOM.render(App);
+//Uncaught Error: Target container is not a DOM element.
