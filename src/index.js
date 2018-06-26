@@ -1,4 +1,6 @@
-//components is a collection of JS functions that produce a view or HTML
+//get react and give me access
+import React from 'react';
+
 // Create a new component. This component should produce some HTML
 const App = function() {
   return <div>Hello!</div>
@@ -6,4 +8,4 @@ const App = function() {
 
 // Take this component's generated HTML and put it on the page(DOM)
 React.render(App);
-//return: Uncaught ReferenceError: React is not defined
+//Uncaught TypeError: _react2.default.render is not a function
