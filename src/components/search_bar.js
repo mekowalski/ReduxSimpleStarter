@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
-  //define state, only class-based comps have state
-  //constructor is the 1st & only function called automatically whenever a new class instance is created
   constructor(props) {
-    //passes on parent method via super
     super(props);
 
+    //the beginning of state in constructor
     this.state = { term: '' };
   }
 
+  //now manipulating/updating the state
+  //always manipulate state with this.setState
   render() {
-    return <input onChange={event => console.log(event.target.value)} />;
+    return (
+      <div>
+        <input onChange={event => this.setState({ term: event.target.value })} />
+      </div>
+    );
   }
 }
 
