@@ -10,10 +10,8 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <input //input is now a controlled component
-          //creating controlled field/input/form element
-          //value changes when the state changes
-          value={this.state.term} //this is controlled component
+        <input
+          value={this.state.term}
           onChange={event => this.setState({ term: event.target.value })}
         />
       </div>
