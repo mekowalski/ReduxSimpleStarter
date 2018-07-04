@@ -8,7 +8,6 @@ import VideoDetail from './components/video_detail'
 const API_KEY = 'AIzaSyCoQ10LAtQjQg1CAjkpIYhE1J_-JrgWVaE';
 
 // Create a new component. This component should produce some HTML
-// add concept of selected video, video object always passed into video detail
 class App extends Component {
   constructor(props) {
     super(props);
@@ -30,8 +29,10 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <VideoDetail video={this.state.selectedVideo} /> //now passing selected video into video detail
-        <VideoList videos={this.state.videos} />
+        <VideoDetail video={this.state.selectedVideo} />
+        <VideoList
+          onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
+          videos={this.state.videos} />
       </div>
     )
   }
