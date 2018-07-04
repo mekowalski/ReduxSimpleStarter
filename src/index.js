@@ -8,7 +8,6 @@ import VideoDetail from './components/video_detail'
 
 const API_KEY = 'AIzaSyCoQ10LAtQjQg1CAjkpIYhE1J_-JrgWVaE';
 
-// Create a new component. This component should produce some HTML
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +17,7 @@ class App extends Component {
       selectedVideo: null
     };
 
-    this.videoSearch('surfboards')
+    this.videoSearch('pitbull puppies')
   }
 
   videoSearch(term) {
@@ -35,7 +34,7 @@ class App extends Component {
 
     return (
       <div>
-        <SearchBar onSearchTermChange={videoSearch} /> //call this function every so milliseconds
+        <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
@@ -46,5 +45,4 @@ class App extends Component {
   }
 }
 
-// Take this component's generated HTML and put it on the page(DOM)
 ReactDOM.render(<App />, document.querySelector('.container'));
