@@ -18,9 +18,6 @@ class SearchBar extends Component {
     );
   }
 
-  //create event handler
-  //set state with term
-  //call the callback from index App
   onInputChange(term) {
     this.setState({term});
     this.props.onSearchTermChange(term);
